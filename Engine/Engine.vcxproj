@@ -19,11 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Actor\Actor.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
+    <ClCompile Include="Level\Level.cpp" />
+    <ClCompile Include="Math\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor\Actor.h" />
     <ClInclude Include="Core\Core.h" />
     <ClInclude Include="Core\Engine.h" />
+    <ClInclude Include="Core\RTTI.h" />
+    <ClInclude Include="Level\Level.h" />
+    <ClInclude Include="Math\Vector2.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -91,6 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>BuildEngineDLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\Core\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,6 +120,7 @@ xcopy $(OutDir)\Engine.dll ..\Lib\Engine\ /y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>BuildEngineDLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\Core\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,6 +140,7 @@ xcopy $(OutDir)\Engine.dll ..\Lib\Engine\ /y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>BuildEngineDLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\Core\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,6 +162,7 @@ xcopy $(OutDir)\Engine.dll ..\Lib\Engine\ /y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>BuildEngineDLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\;$(ProjectDir)\Core\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
